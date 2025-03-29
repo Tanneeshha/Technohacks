@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <link rel = "stylesheet" href = "style.css" >
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="quiz-header">
+            <h1>Knowledge Quiz</h1>
+            <p>Test your general knowledge with these questions!</p>
+        </div>
+        
+        <div class="quiz-body">
+            <div class="question-container">
+                <p class="question" id="question-text">Loading question...</p>
+                <ul class="options" id="options-list">
+                </ul>
+            </div>
+            
+            <div class="progress-container">
+                <div class="progress-text">
+                    <span id="current-question">1</span>
+                    <span id="total-questions">/5</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" id="progress"></div>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <button id="prev-btn" disabled>Previous</button>
+                <button id="next-btn">Next</button>
+            </div>
+        </div>
+        
+        <div class="result-container" id="result">
+            <h2 class="result-title">Quiz Completed!</h2>
+            <p>Your final score is:</p>
+            <div class="score" id="score">0/5</div>
+            <p class="result-details" id="result-details">You answered 0 out of 5 questions correctly.</p>
+            <button class="restart-btn" id="restart-btn">Restart Quiz</button>
+        </div>
+    </div>
+</body>
+</html>
