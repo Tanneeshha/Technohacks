@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grid Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Grid Layout</h1>
+    
+    <div class="controls">
+        <button id="grid-btn" class="active">CSS Grid</button>
+        <button id="flex-btn">Flexbox</button>
+    </div>
+    
+    <!-- CSS Grid Layout -->
+    <div class="grid-container" id="grid-layout">
+        <div class="card">
+            <img src="Image/Nature.jpeg" alt="Nature landscape">
+            <div class="card-content">
+                <h3>Mountain View</h3>
+                <p>Beautiful mountain landscape with clear skies and lush greenery.</p>
+                <span class="tag">Nature</span>
+                <span class="tag">Mountain</span>
+            </div>
+        </div>
+        
+        <div class="card">
+            <img src="Image/Beach.jpeg" alt="Beach">
+            <div class="card-content">
+                <h3>Coastal Retreat</h3>
+                <p>Sandy beaches with crystal clear waters perfect for a summer getaway.</p>
+                <span class="tag">Beach</span>
+                <span class="tag">Summer</span>
+            </div>
+        </div>
+        
+        <div class="card">
+            <img src="Image/City.jpeg" alt="Urban cityscape">
+            <div class="card-content">
+                <h3>City Lights</h3>
+                <p>Modern urban skyline illuminated by countless lights at dusk.</p>
+                <span class="tag">Urban</span>
+                <span class="tag">Architecture</span>
+            </div>
+        </div>
+        
+        <div class="card">
+            <img src="Image/Forest.jpeg" alt="Forest">
+            <div class="card-content">
+                <h3>Deep Forest</h3>
+                <p>Ancient trees create a mesmerizing canopy in this dense forest.</p>
+                <span class="tag">Forest</span>
+                <span class="tag">Wilderness</span>
+            </div>
+        </div>
+        
+        <div class="card">
+            <img src="Image/Desert.jpeg" alt="Desert">
+            <div class="card-content">
+                <h3>Desert Dunes</h3>
+                <p>Endless sand dunes stretching to the horizon under the scorching sun.</p>
+                <span class="tag">Desert</span>
+                <span class="tag">Adventure</span>
+            </div>
+        </div>
+        
+        <div class="card">
+            <img src="Image/Lake.jpeg" alt="Lake">
+            <div class="card-content">
+                <h3>Still Waters</h3>
+                <p>Peaceful lake reflecting the surrounding mountains like a mirror.</p>
+                <span class="tag">Lake</span>
+                <span class="tag">Reflection</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Flexbox Layout -->
+    <div class="flex-container hidden" id="flex-layout">
+        <div class="card">
+            <img src="Image/Nature.jpeg" alt="Nature landscape">
+            <div class="card-content">
+                <h3>Mountain View</h3>
+                <p>Beautiful mountain landscape with clear skies and lush greenery.</p>
+                <span class="tag">Nature</span>
+                <span class="tag">Mountain</span>
+            </div>
+        </div>
+        
+        <div class="card">
+            <img src="Image/Beach.jpeg" alt="Beach">
+            <div class="card-content">
+                <h3>Coastal Retreat</h3>
+                <p>Sandy beaches with crystal clear waters perfect for a summer getaway.</p>
+                <span class="tag">Beach</span>
+                <span class="tag">Summer</span>
+            </div>
+        </div>
+        
+        <div class="card">
+            <img src="Image/City.jpeg" alt="Urban cityscape">
+            <div class="card-content">
+                <h3>City Lights</h3>
+                <p>Modern urban skyline illuminated by countless lights at dusk.</p>
+                <span class="tag">Urban</span>
+                <span class="tag">Architecture</span>
+            </div>
+        </div>
+        
+        <div class="card">
+            <img src="Image/Forest.jpeg" alt="Forest">
+            <div class="card-content">
+                <h3>Deep Forest</h3>
+                <p>Ancient trees create a mesmerizing canopy in this dense forest.</p>
+                <span class="tag">Forest</span>
+                <span class="tag">Wilderness</span>
+            </div>
+        </div>
+        
+        <div class="card">
+            <img src="Image/Desert.jpeg" alt="Desert">
+            <div class="card-content">
+                <h3>Desert Dunes</h3>
+                <p>Endless sand dunes stretching to the horizon under the scorching sun.</p>
+                <span class="tag">Desert</span>
+                <span class="tag">Adventure</span>
+            </div>
+        </div>
+        
+        <div class="card">
+            <img src="Image/Lake.jpeg" alt="Lake">
+            <div class="card-content">
+                <h3>Still Waters</h3>
+                <p>Peaceful lake reflecting the surrounding mountains like a mirror.</p>
+                <span class="tag">Lake</span>
+                <span class="tag">Reflection</span>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const gridBtn = document.getElementById('grid-btn');
+        const flexBtn = document.getElementById('flex-btn');
+        const gridLayout = document.getElementById('grid-layout');
+        const flexLayout = document.getElementById('flex-layout');
+        
+        gridBtn.addEventListener('click', () => {
+            gridLayout.classList.remove('hidden');
+            flexLayout.classList.add('hidden');
+            gridBtn.classList.add('active');
+            flexBtn.classList.remove('active');
+        });
+        
+        flexBtn.addEventListener('click', () => {
+            flexLayout.classList.remove('hidden');
+            gridLayout.classList.add('hidden');
+            flexBtn.classList.add('active');
+            gridBtn.classList.remove('active');
+        });
+    </script>
+</body>
+</html>
